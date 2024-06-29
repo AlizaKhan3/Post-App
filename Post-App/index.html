@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar w/ text</a>
+      <span class="navbar-text" id="time" onclick="updateTime()"></span>
+    </div>
+    </div>
+  </nav>
+  <!-- <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <\PostApp />
+      </a>
+      <span id="time" onclick="updateTime()"></span>
+    </div>
+  </nav> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="mobilep p-4">
+          <div class="card p-4">
+            <!-- <form> -->
+            <div class="mb-3">
+              <label class="form-label">Post Title</label>
+              <input id="title" type="text" class="form-control fieldStyle" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Post Description</label>
+              <textarea id="description" class="form-control fieldStyle" id="exampleFormControlTextarea1"
+                rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <div class="images-list d-flex">
+                <!-- <img src="images/bg1.avif" alt="">
+                <img src="images/bg11.jpeg" alt=""> -->
+                <!-- <img class="bg-images"onclick="selectBgImage('images/bg1.jpeg')" src="images/bg11.jpeg" alt="">  -->
+                <img class="bg-images"onclick="selectBgImage('images/bg6.jpeg')" src="images/bg6.jpeg" alt=""> 
+                <img class="bg-images" onclick="selectBgImage('images/bg2.jpeg')" src="images/bg2.jpeg" alt="">
+                <img class="bg-images" onclick="selectBgImage('images/bg5.avif')" src="images/bg5.avif" alt="">
+                <img class="bg-images" onclick="selectBgImage('images/bg7.jpeg')" src="images/bg7.jpeg" alt="">
+                <img class="bg-images" onclick="selectBgImage('images/bg8.jpeg')" src="images/bg8.jpeg" alt="">
+                <img class="bg-images" onclick="selectBgImage('images/bg9.jpeg')" src="images/bg9.jpeg" alt="">
+              </div>
+            </div>
+            <button onclick="addPost()" type="submit" class="btn btn-primary">Submit</button>
+            <!-- </form> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Here post will appear after creation -->
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+        <div id="posts" class="mobilep p-4">
+          <!-- <div class="card">
+                <div class="card-header">
+                  @Post 
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                  </blockquote>
+                </div>
+              </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
