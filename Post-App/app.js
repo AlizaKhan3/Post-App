@@ -9,9 +9,17 @@ updateTime(); // update the time initially
 setInterval(updateTime, 1000);
 
 var bgImageVar;
+var fontColorVar;
+
 function addPost() {
   const title = document.getElementById("title");
   const description = document.getElementById("description");
+  const colorPicker = document.getElementById("colorPicker");
+
+  colorPicker.addEventListener('input' , (e) => {
+    const selectedColor = e.target.value;
+    fontColorVar =  selectedColor;
+  });
 
   if (title.value.trim() && description.value.trim()) {
 
@@ -22,8 +30,8 @@ function addPost() {
             </div>
             <div style ="background-image: url(${bgImageVar})" class="card-body">
               <blockquote class="blockquote mb-0">
-                <p>${title.value}</p>
-                <footer class="blockquote-footer">${description.value} <cite title="Source Title"></cite>
+                <p style="color:${fontColorVar}">${title.value}</p>
+                <footer style="color:${fontColorVar}" class="blockquote-footer">${description.value} <cite title="Source Title"></cite>
                 </footer>
               </blockquote>
             </div>
@@ -39,7 +47,6 @@ function addPost() {
     });
   }
 }
-
 
 function selectBgImage(src){
   // console.log(src);
